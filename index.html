@@ -14,14 +14,15 @@
         <nav>
         <ul>
             <li><a class="theme" href="#">Home</a></li>
-            <li><a class="theme" href="#">Login</a></li>
+            <li><a class="theme" href="https://moemad1707-cmyk.github.io/freoun/">Login</a></li>
             <li><a class="theme" href="https://adelhassan-sys.github.io/Adel/">Sign Up</a></li>
-            <li><a class="theme" href="#">Museums</a></li>
+            <li><a class="theme" href="https://ahmed-essam-abdelhamid.github.io/Museums/">Museums</a></li>
             <li><a class="theme" href="#">Search</a></li>
-            <li><a class="theme" href="#">Gallery</a></li>
-            <li><a class="theme" href="#">tickets</a></li>
+            <li><a class="theme" href="">Gallery</a></li>
+            <li><a class="theme" href="https://omaryoussri.github.io/EgyptianMuseums/">tickets</a></li>
             <li><a class="theme" href="#">Contact Us</a></li>
-            </ul>
+            <li><button id="theme-toggle">light Mode</button></li>
+        </ul>
         </nav>
     </div>
     <section class="backimage">
@@ -64,6 +65,19 @@
                 </div>
             </div>
             </section>
+            <script>
+    const btn = document.getElementById("theme-toggle");
+
+    btn.onclick = function () {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            btn.textContent = "Dark Mode";
+        } else {
+            btn.textContent = "Light Mode";
+        }
+    };
+</script>
     <footer class="footer">
             <p>© 2026 All Rights Reserved</p>
             <p>This website was designed and developed by Omar Ibrahim , Ziad Fiasal , Adel Hassan , Ahmed Mohamed , Omar Youssry , Ahmed Essam , Mohamed Emad , Mahmoud Ayman</p>
