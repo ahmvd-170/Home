@@ -1,6 +1,4 @@
-html, body{
-    overflow-x: hidden;
-}
+
 body{
     background-color: rgb(0, 0, 0);
     color: aliceblue;
@@ -17,7 +15,47 @@ background-position: center;
 background-attachment: fixed;
 background-size: cover;
 }
+/* Light mode بدون تغيير الخلفية */
+.light-mode nav {
+    background: rgba(255, 255, 255, 0.395);
+    backdrop-filter: blur(10px);
+}
 
+.light-mode .theme {
+    color: black;
+}
+
+.light-mode .theme:hover {
+    color: goldenrod;
+}
+
+/* underline */
+.light-mode .theme::after {
+    background: goldenrod;
+}
+
+/* footer */
+.light-mode footer {
+    background: #ffffff;
+    color: black;
+}
+
+/* container الفيديو */
+.light-mode .container {
+    background: rgba(255, 255, 255, 0.395);
+    backdrop-filter: blur(10px);
+}
+
+/* النص */
+.light-mode .para {
+    background: rgba(255, 255, 255, 0.395);
+    color: black;
+}
+.light-mode footer {
+    background: rgba(255, 255, 255, 0.395);
+    backdrop-filter: blur(10px);
+    color: black;
+}
 nav{
 background: linear-gradient(rgba(0, 0, 0, 0.508));
 padding: 20px;
@@ -43,7 +81,7 @@ font-family: "Shojumaru", system-ui;
 text-decoration: none;
 display: inline-block;
 transition: transform 0.3s ease,color 0.3s ease;
-
+text-align: center;
 }
 .theme::after{
 width: 0px;
@@ -70,6 +108,18 @@ text-shadow: 0 0 10px gold;
     align-items: center;
     padding: 50px 0px 50px 0px;
 }
+#theme-toggle{
+    padding: 8px 15px;
+    background-color: gold;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: transform 0.3s ease,color 0.3s ease;
+}
+#theme-toggle:hover{
+    transform: scale(1.2);
+}
 img{
     width: 1000px;
 }
@@ -86,6 +136,7 @@ img{
 }
 .content p{
     margin: 10px 0;
+    font-size: 20px;
 }
 .exp{
     padding: 10px 10px;
