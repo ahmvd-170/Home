@@ -16,26 +16,6 @@
     }
 </script>
 </head>
-    <script>
-    const btn = document.getElementById("theme-toggle");
-
-    // تحديث نص الزرار عند التحميل
-    if (document.documentElement.classList.contains("light-mode")) {
-        btn.textContent = "Dark Mode";
-    }
-
-    btn.onclick = function () {
-        document.documentElement.classList.toggle("light-mode");
-
-        if (document.documentElement.classList.contains("light-mode")) {
-            btn.textContent = "Dark Mode";
-            localStorage.setItem("theme", "light");
-        } else {
-            btn.textContent = "Light Mode";
-            localStorage.setItem("theme", "dark");
-        }
-    };
-</script>
 <body>
     <div class="navbar">
         <nav>
@@ -96,5 +76,25 @@
             <p>© 2026 All Rights Reserved</p>
             <p>This website was designed and developed by Omar Ibrahim , Ziad Fiasal , Adel Hassan , Ahmed Mohamed , Omar Youssry , Ahmed Essam , Mohamed Emad , Mahmoud Ayman</p>
     </footer>
+    <script>
+    const btn = document.getElementById("theme-toggle");
+
+    // ضبط نص الزرار
+    if (document.documentElement.classList.contains("light-mode")) {
+        btn.textContent = "Dark Mode";
+    }
+
+    btn.onclick = function () {
+        document.documentElement.classList.toggle("light-mode");
+
+        if (document.documentElement.classList.contains("light-mode")) {
+            btn.textContent = "Dark Mode";
+            localStorage.setItem("theme", "light");
+        } else {
+            btn.textContent = "Light Mode";
+            localStorage.setItem("theme", "dark");
+        }
+    };
+</script>
 </body>
 </html>
