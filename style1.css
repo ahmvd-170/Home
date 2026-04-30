@@ -16,42 +16,42 @@ background-attachment: fixed;
 background-size: cover;
 }
 /* Light mode بدون تغيير الخلفية */
-.light-mode nav {
+html.light-mode nav {
     background: rgba(255, 255, 255, 0.395);
     backdrop-filter: blur(10px);
 }
 
-.light-mode .theme {
+html.light-mode .theme {
     color: black;
 }
 
-.light-mode .theme:hover {
+html.light-mode .theme:hover {
     color: goldenrod;
 }
 
 /* underline */
-.light-mode .theme::after {
+html.light-mode .theme::after {
     background: goldenrod;
 }
 
 /* footer */
-.light-mode footer {
+html.light-mode footer {
     background: #ffffff;
     color: black;
 }
 
 /* container الفيديو */
-.light-mode .container {
+html.light-mode .container {
     background: rgba(255, 255, 255, 0.395);
     backdrop-filter: blur(10px);
 }
 
 /* النص */
-.light-mode .para {
+html.light-mode .para {
     background: rgba(255, 255, 255, 0.395);
     color: black;
 }
-.light-mode footer {
+html.light-mode footer {
     background: rgba(255, 255, 255, 0.395);
     backdrop-filter: blur(10px);
     color: black;
