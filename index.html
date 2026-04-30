@@ -68,13 +68,28 @@
             <script>
     const btn = document.getElementById("theme-toggle");
 
+    // لما الصفحة تفتح
+    window.onload = function () {
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+            btn.textContent = "Dark Mode";
+        } else {
+            btn.textContent = "Light Mode";
+        }
+    };
+
+    // لما المستخدم يضغط
     btn.onclick = function () {
         document.body.classList.toggle("light-mode");
 
         if (document.body.classList.contains("light-mode")) {
             btn.textContent = "Dark Mode";
+            localStorage.setItem("theme", "light"); // حفظ
         } else {
             btn.textContent = "Light Mode";
+            localStorage.setItem("theme", "dark"); // حفظ
         }
     };
 </script>
